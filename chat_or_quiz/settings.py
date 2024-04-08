@@ -129,13 +129,18 @@ WSGI_APPLICATION = 'chat_or_quiz.wsgi.application'
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
+        # 'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'ipanzek_wp93',
+            'NAME': 'ipanzek_quiz',
+            # 'NAME': 'ipanzek_wp93',
             'USER': 'ipanzek',
             'PASSWORD': "@BessieNta16",
-            'HOST': '67.222.140.61',
-            'PORT': '3306'
+            # 'HOST': '/var/run/mysql',
+            # 'HOST': '67.222.140.61',
+            'HOST': '127.0.0.1',
+            'PORT': '',
+            # 'PORT': '3306'
         }
     }
 
