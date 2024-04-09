@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['chat-or-quiz.ipanzek.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['chatorquiz.ipanzek.com', 'localhost', '127.0.0.1']
 
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
@@ -129,19 +129,19 @@ WSGI_APPLICATION = 'chat_or_quiz.wsgi.application'
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        # 'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'ipanzek_quiz',
-            # 'NAME': 'ipanzek_wp93',
-            'USER': 'ipanzek',
-            'PASSWORD': "@BessieNta16",
-            # 'HOST': '/var/run/mysql',
-            # 'HOST': '67.222.140.61',
-            'HOST': '127.0.0.1',
-            'PORT': '',
-            # 'PORT': '3306'
-        }
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        # 'default': {
+        #     'ENGINE': 'django.db.backends.mysql',
+        #     'NAME': 'ipanzek_quiz',
+        #     # 'NAME': 'ipanzek_wp93',
+        #     'USER': 'ipanzek',
+        #     'PASSWORD': "@BessieNta16",
+        #     # 'HOST': '/var/run/mysql',
+        #     # 'HOST': '67.222.140.61',
+        #     'HOST': '127.0.0.1',
+        #     'PORT': '',
+        #     # 'PORT': '3306'
+        # }
     }
 
 else:
