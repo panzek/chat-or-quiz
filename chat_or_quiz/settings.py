@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 import os
 from pathlib import Path
-import dj_database_url
+# import dj_database_url
 
 if os.path.isfile('env.py'):
     import env # noqa
@@ -126,22 +126,16 @@ WSGI_APPLICATION = 'chat_or_quiz.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-        # 'default': {
-        #     'ENGINE': 'django.db.backends.mysql',
-        #     'NAME': 'ipanzek_quiz',
-        #     # 'NAME': 'ipanzek_wp93',
-        #     'USER': 'ipanzek',
-        #     'PASSWORD': "@BessieNta16",
-        #     # 'HOST': '/var/run/mysql',
-        #     # 'HOST': '67.222.140.61',
-        #     'HOST': '127.0.0.1',
-        #     'PORT': '',
-        #     # 'PORT': '3306'
-        # }
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': os.environ.get('NAME'),
+            'USER': os.environ.get('USER'),
+            'PASSWORD': os.environ.get('PASSWORD'),
+            'HOST': os.environ.get('HOST'),
+            'PORT': os.environ.get('PORT'),
+        }
     }
 
 else:
