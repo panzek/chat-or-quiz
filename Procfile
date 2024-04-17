@@ -1,1 +1,0 @@
-web: gunicorn chat_or_quiz.wsgi:application

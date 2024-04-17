@@ -8,9 +8,10 @@ https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/
 """
 
 import os
-import sys
 
-sys.path.append('/home/ipanzek/public_html/chat-or-quiz/chat_or_quiz/')
-os.environ['DJANGO_SETTINGS_MODULE'] = 'chat_or_quiz.settings'
-import django.core.handlers.wsgi
-application = django.core.handlers.wsgi.WSGIHandler()
+from django.core.wsgi import get_wsgi_application
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'chat_or_quiz.settings')
+
+application = get_wsgi_application()
+
