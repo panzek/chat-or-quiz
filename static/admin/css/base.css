@@ -1,9 +1,9 @@
-/*
+/* 
     DJANGO Admin styles
 */
 
 /* VARIABLE DEFINITIONS */
-html[data-theme="light"],
+/* html[data-theme="light"],
 :root {
     --primary: #79aec8;
     --secondary: #417690;
@@ -35,11 +35,11 @@ html[data-theme="light"],
 
     --message-success-bg: #dfd;
     --message-warning-bg: #ffc;
-    --message-error-bg: #ffefef;
+    --message-error-bg: #ffefef; */
 
-    --darkened-bg: #f8f8f8; /* A bit darker than --body-bg */
-    --selected-bg: #e4e4e4; /* E.g. selected table cells */
-    --selected-row: #ffc;
+    /* --darkened-bg: #f8f8f8; A bit darker than --body-bg */
+    /* --selected-bg: #e4e4e4; E.g. selected table cells */
+    /* --selected-row: #ffc;
 
     --button-fg: #fff;
     --button-bg: var(--secondary);
@@ -99,11 +99,11 @@ body {
     font-family: var(--font-family-primary);
     color: var(--body-fg);
     background: var(--body-bg);
-}
+} */
 
 /* LINKS */
 
-a:link, a:visited {
+/* a:link, a:visited {
     color: var(--link-fg);
     text-decoration: none;
     transition: color 0.15s, background 0.15s;
@@ -128,11 +128,11 @@ a.section:link, a.section:visited {
 
 a.section:focus, a.section:hover {
     text-decoration: underline;
-}
+} */
 
 /* GLOBAL DEFAULTS */
 
-p, ol, ul, dl {
+/* p, ol, ul, dl {
     margin: .2em 0 .8em 0;
 }
 
@@ -253,10 +253,10 @@ hr {
     margin: 0;
     padding: 0;
     line-height: 1px;
-}
+} */
 
 /* TEXT STYLES & MODIFIERS */
-
+/* 
 .small {
     font-size: 0.6875rem;
 }
@@ -297,10 +297,10 @@ p img, h1 img, h2 img, h3 img, h4 img, td img {
 
 .hidden {
     display: none !important;
-}
+} */
 
 /* TABLES */
-
+/* 
 table {
     border-collapse: collapse;
     border-color: var(--border-color);
@@ -352,10 +352,10 @@ tr:nth-child(even) .errorlist,
 tr:nth-child(odd) + .row-form-errors,
 tr:nth-child(odd) + .row-form-errors .errorlist {
     background: var(--darkened-bg);
-}
+} */
 
 /* SORTABLE TABLES */
-
+/* 
 thead th {
     padding: 5px 10px;
     line-height: normal;
@@ -464,10 +464,10 @@ table thead th.sorted .sortoptions a.descending {
 table thead th.sorted .sortoptions a.descending:focus,
 table thead th.sorted .sortoptions a.descending:hover {
     background-position: 0 -70px;
-}
+} */
 
 /* FORM DEFAULTS */
-
+/* 
 input, textarea, select, .form-row p, form .button {
     margin: 2px 0;
     padding: 2px 3px;
@@ -482,13 +482,13 @@ input, textarea, select, .form-row p, form .button {
 
 textarea {
     vertical-align: top;
-}
+} */
 
 /*
 Minifiers remove the default (text) "type" attribute from "input" HTML tags.
 Add input:not([type]) to make the CSS stylesheet work the same.
 */
-input:not([type]), input[type=text], input[type=password], input[type=email],
+/* input:not([type]), input[type=text], input[type=password], input[type=email],
 input[type=url], input[type=number], input[type=tel], textarea, select,
 .vTextField {
     border: 1px solid var(--border-color);
@@ -497,13 +497,13 @@ input[type=url], input[type=number], input[type=tel], textarea, select,
     margin-top: 0;
     color: var(--body-fg);
     background-color: var(--body-bg);
-}
+} */
 
 /*
 Minifiers remove the default (text) "type" attribute from "input" HTML tags.
 Add input:not([type]) to make the CSS stylesheet work the same.
 */
-input:not([type]):focus, input[type=text]:focus, input[type=password]:focus,
+/* input:not([type]):focus, input[type=text]:focus, input[type=password]:focus,
 input[type=email]:focus, input[type=url]:focus, input[type=number]:focus,
 input[type=tel]:focus, textarea:focus, select:focus, .vTextField:focus {
     border-color: var(--body-quiet-color);
@@ -513,15 +513,15 @@ select {
     height: 1.875rem;
 }
 
-select[multiple] {
+select[multiple] { */
     /* Allow HTML size attribute to override the height in the rule above. */
-    height: auto;
+    /* height: auto;
     min-height: 150px;
-}
+} */
 
 /* FORM BUTTONS */
 
-.button, input[type=submit], input[type=button], .submit-row input, a.button {
+/* .button, input[type=submit], input[type=button], .submit-row input, a.button {
     background: var(--button-bg);
     padding: 10px 15px;
     border: none;
@@ -538,8 +538,8 @@ a.button {
 .button:active, input[type=submit]:active, input[type=button]:active,
 .button:focus, input[type=submit]:focus, input[type=button]:focus,
 .button:hover, input[type=submit]:hover, input[type=button]:hover {
-    background: var(--button-hover-bg);
-}
+    background: var(--button-hover-bg); */
+/* }
 
 .button[disabled], input[type=submit][disabled], input[type=button][disabled] {
     opacity: 0.4;
@@ -561,12 +561,12 @@ a.button {
 input[type=submit][disabled].default,
 input[type=button][disabled].default {
     opacity: 0.4;
-}
+} */
 
 
 /* MODULES */
 
-.module {
+/* .module {
     border: none;
     margin-bottom: 30px;
     background: var(--body-bg);
@@ -608,10 +608,10 @@ input[type=button][disabled].default {
 
 .module table {
     border-collapse: collapse;
-}
+} */
 
 /* MESSAGES & ERRORS */
-
+/* 
 ul.messagelist {
     padding: 0;
     margin: 0;
@@ -704,10 +704,10 @@ td ul.errorlist + input, td ul.errorlist + select, td ul.errorlist + textarea {
 .description {
     font-size: 0.75rem;
     padding: 5px 0 0 12px;
-}
+} */
 
 /* BREADCRUMBS */
-
+/* 
 div.breadcrumbs {
     background: var(--breadcrumbs-bg);
     padding: 10px 40px;
@@ -722,10 +722,10 @@ div.breadcrumbs a {
 
 div.breadcrumbs a:focus, div.breadcrumbs a:hover {
     color: var(--breadcrumbs-fg);
-}
+} */
 
 /* ACTION ICONS */
-
+/* 
 .viewlink, .inlineviewlink {
     padding-left: 16px;
     background: url(../img/icon-viewlink.svg) 0 1px no-repeat;
@@ -751,17 +751,17 @@ div.breadcrumbs a:focus, div.breadcrumbs a:hover {
     background: url(../img/icon-deletelink.svg) 0 1px no-repeat;
 }
 
-a.deletelink:link, a.deletelink:visited {
-    color: #CC3434; /* XXX Probably unused? */
-}
+a.deletelink:link, a.deletelink:visited { */
+    /* color: #CC3434; XXX Probably unused? */
+/* }
 
-a.deletelink:focus, a.deletelink:hover {
-    color: #993333; /* XXX Probably unused? */
-    text-decoration: none;
-}
+a.deletelink:focus, a.deletelink:hover { */
+    /* color: #993333; XXX Probably unused? */
+    /* text-decoration: none;
+} */
 
 /* OBJECT TOOLS */
-
+/* 
 .object-tools {
     font-size: 0.625rem;
     font-weight: bold;
@@ -814,10 +814,10 @@ a.deletelink:focus, a.deletelink:hover {
 
 .object-tools a.addlink {
     background-image: url(../img/tooltag-add.svg);
-}
+} */
 
 /* OBJECT HISTORY */
-
+/* 
 #change-history table {
     width: 100%;
 }
@@ -831,10 +831,10 @@ a.deletelink:focus, a.deletelink:hover {
     border-bottom: 1px solid var(--hairline-color);
     background: var(--body-bg);
     overflow: hidden;
-}
+} */
 
 /* PAGE STRUCTURE */
-
+/* 
 #container {
     position: relative;
     width: 100%;
@@ -893,10 +893,10 @@ a.deletelink:focus, a.deletelink:hover {
   #content-related {
       border: 1px solid;
   }
-}
+} */
 
 /* COLUMN TYPES */
-
+/* 
 .colMS {
     margin-right: 300px;
 }
@@ -917,10 +917,10 @@ a.deletelink:focus, a.deletelink:hover {
 
 .popup .colM {
     width: auto;
-}
+} */
 
 /* HEADER */
-
+/* 
 #header {
     width: auto;
     height: auto;
@@ -1012,10 +1012,10 @@ a.deletelink:focus, a.deletelink:hover {
 
 #logout-form button:active, #logout-form button:hover {
     margin-bottom: 1px;
-}
+} */
 
 /* SIDEBAR */
-
+/* 
 #content-related {
     background: var(--darkened-bg);
 }
@@ -1088,10 +1088,10 @@ a.deletelink:focus, a.deletelink:hover {
 .delete-confirmation form .cancel-link:focus,
 .delete-confirmation form .cancel-link:hover {
     background: var(--close-button-hover-bg);
-}
+} */
 
 /* POPUP */
-.popup #content {
+/* .popup #content {
     padding: 20px;
 }
 
@@ -1101,10 +1101,10 @@ a.deletelink:focus, a.deletelink:hover {
 
 .popup #header {
     padding: 10px 20px;
-}
+} */
 
 /* PAGINATOR */
-
+/* 
 .paginator {
     display: flex;
     align-items: center;
@@ -1171,4 +1171,4 @@ a.deletelink:focus, a.deletelink:hover {
     border: 0;
     color: var(--body-fg);
     background-color: var(--body-bg);
-}
+} */
