@@ -96,7 +96,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'allauth.account.middleware.AccountMiddleware', 
+    # 'allauth.account.middleware.AccountMiddleware', 
 ]
 
 ROOT_URLCONF = 'chat_or_quiz.urls'
@@ -127,13 +127,6 @@ WSGI_APPLICATION = 'chat_or_quiz.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
