@@ -14,8 +14,11 @@ import os
 from pathlib import Path
 import dj_database_url
 
-if os.path.isfile('env.py'):
-    import env # noqa
+from dotenv import load_dotenv
+
+if os.path.isfile('.env'):
+    load_dotenv()
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -149,7 +152,7 @@ WSGI_APPLICATION = 'chat_or_quiz.wsgi.application'
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default': dj_database_url.config(os.environ.get('DATABASE_URL'))
+        'default': dj_database_url.config(default=os.environ.get('DATABASE_URL')),
         }
 else:
     DATABASES = {
